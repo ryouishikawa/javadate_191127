@@ -1,0 +1,47 @@
+# javadate_191127
+Javaで、YYYY/MM/DD形式の日付を使ったプログラム
+
+
+---------in English------------------------------------
+
+① Program overview
+This program calculates the same day of the previous month from a yyyy / mm / dd format string.
+
+② Characteristics of the program
+In many cases, it is okay to subtract 1 from the month, but you need to consider when:
+・ In the case of the last day of the month (for example, the same day of the previous month of 7/31 is 6/30 instead of 6/31)
+・ In the case of January (not subtraction, subtract 1 from the year and set 12 for the month)
+
+③How to use
+The source on github has the following flow for the sample.
+∙ Enter the date using the keyboard (input in YYYY / MM / DD format)
+  ・ Call method "zengetu"
+  ・ The same day of the previous month will be returned.
+  If you make a program to call the process of calling zengetu, you can get the same day of the previous month!
+
+④ Restrictions
+・ Although we are dealing with leap years, we are not dealing with special leap years like 2016 (leap years, but up to February 29)
+-The date passed as a parameter assumes that a minimum error check has been applied. So like 2019/01/00
+Entry of the date will not cause an error.
+
+---------in Japanese-----------------------
+
+①プログラム概要
+yyyy/mm/dd形式の文字列から、前月の同日を算出するプログラムです。
+
+②当該プログラムの特徴
+多くのケースは、月から1を減算すれば大丈夫ですが、以下のような場合に考慮が必要です。
+・月末日の場合（例えば、7/31の前月同日は6/31ではなく6/30です）
+・1月の場合（減算ではなく、年から1を減算し、月には12を設定する）
+
+③使い方
+githubに載せたソースは、サンプル用に以下のような流れになっています。
+　・キーボードで、日付を入力（YYYY/MM/DD形式で入力）
+  ・メソッド"zengetu"を呼び出し
+  ・前月同日が返却される。
+  呼び出しているzengetuの処理を呼び出していただくようにプログラムを作っていただければ、前月の同日を取得できます！
+
+④制約
+・うるう年対応はしていますが、2016年のような特殊なうるう年の対応はしていません（うるう年だが2月29日まである年）
+・パラメータとして受け渡す日付は、最低限のエラーチェックがかかっている事を前提にしています。したがって2019/01/00のような
+　日付を入れてもエラーにはなりません。
